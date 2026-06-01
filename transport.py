@@ -42,3 +42,18 @@ class Scooter(Transport):
 
     def travel_time(self):
         return "15 minutes"
+class Rollerblades(Transport):
+    def vehicle_type(self):
+        return "Rollerblades"
+    def arrival_time(self):
+        return "1 minute"
+    def travel_time(self):
+        return "30 minutes"
+
+class Bus(Transport):
+    def vehicle_type(self):
+        return "Bus"
+    def arrival_time(self):
+        return "10 minutes"
+    def travel_time(self):
+        return "20 minutes"
