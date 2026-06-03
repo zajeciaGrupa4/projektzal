@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>services module &#8212; Transport 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="transport module" href="transport.html" />
+    <link rel="prev" title="main module" href="main.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-services">
+<span id="services-module"></span><h1>services module<a class="headerlink" href="#module-services" title="Link to this heading">¶</a></h1>
+<section id="modul-services-py">
+<h2>Moduł services.py<a class="headerlink" href="#modul-services-py" title="Link to this heading">¶</a></h2>
+<p>Zawiera klasy twórców (Creators) realizujące wzorzec Factory Method.
+Odpowiada za logikę biznesową zamawiania transportu oraz zarządzanie jego dostępnością.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="services.BikeService">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">services.</span></span><span class="sig-name descname"><span class="pre">BikeService</span></span><a class="headerlink" href="#services.BikeService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#services.TransportServices" title="services.TransportServices"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransportServices</span></code></a></p>
+<p>Konkretna usługa fabrykująca odpowiedzialna za tworzenie obiektów typu Bike.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.BikeService.create_transport">
+<span class="sig-name descname"><span class="pre">create_transport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.BikeService.create_transport" title="Link to this definition">¶</a></dt>
+<dd><p>Metoda fabrykująca (Factory Method).
+Musi zostać nadpisana przez podklasy w celu zwrócenia konkretnego obiektu Transport.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.BikeService.transport_name">
+<span class="sig-name descname"><span class="pre">transport_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.BikeService.transport_name" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca tekstową nazwę usługi transportowej.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="services.BusService">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">services.</span></span><span class="sig-name descname"><span class="pre">BusService</span></span><a class="headerlink" href="#services.BusService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#services.TransportServices" title="services.TransportServices"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransportServices</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.BusService.create_transport">
+<span class="sig-name descname"><span class="pre">create_transport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.BusService.create_transport" title="Link to this definition">¶</a></dt>
+<dd><p>Metoda fabrykująca (Factory Method).
+Musi zostać nadpisana przez podklasy w celu zwrócenia konkretnego obiektu Transport.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.BusService.transport_name">
+<span class="sig-name descname"><span class="pre">transport_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.BusService.transport_name" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca tekstową nazwę usługi transportowej.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="services.RollerbladesService">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">services.</span></span><span class="sig-name descname"><span class="pre">RollerbladesService</span></span><a class="headerlink" href="#services.RollerbladesService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#services.TransportServices" title="services.TransportServices"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransportServices</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.RollerbladesService.create_transport">
+<span class="sig-name descname"><span class="pre">create_transport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.RollerbladesService.create_transport" title="Link to this definition">¶</a></dt>
+<dd><p>Metoda fabrykująca (Factory Method).
+Musi zostać nadpisana przez podklasy w celu zwrócenia konkretnego obiektu Transport.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.RollerbladesService.transport_name">
+<span class="sig-name descname"><span class="pre">transport_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.RollerbladesService.transport_name" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca tekstową nazwę usługi transportowej.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="services.ScooterService">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">services.</span></span><span class="sig-name descname"><span class="pre">ScooterService</span></span><a class="headerlink" href="#services.ScooterService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#services.TransportServices" title="services.TransportServices"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransportServices</span></code></a></p>
+<p>Konkretna usługa fabrykująca odpowiedzialna za tworzenie obiektów typu Scooter.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.ScooterService.create_transport">
+<span class="sig-name descname"><span class="pre">create_transport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.ScooterService.create_transport" title="Link to this definition">¶</a></dt>
+<dd><p>Metoda fabrykująca (Factory Method).
+Musi zostać nadpisana przez podklasy w celu zwrócenia konkretnego obiektu Transport.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.ScooterService.transport_name">
+<span class="sig-name descname"><span class="pre">transport_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.ScooterService.transport_name" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca tekstową nazwę usługi transportowej.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="services.TaxiService">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">services.</span></span><span class="sig-name descname"><span class="pre">TaxiService</span></span><a class="headerlink" href="#services.TaxiService" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#services.TransportServices" title="services.TransportServices"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransportServices</span></code></a></p>
+<p>Konkretna usługa fabrykująca odpowiedzialna za tworzenie obiektów typu Taxi.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.TaxiService.create_transport">
+<span class="sig-name descname"><span class="pre">create_transport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.TaxiService.create_transport" title="Link to this definition">¶</a></dt>
+<dd><p>Metoda fabrykująca (Factory Method).
+Musi zostać nadpisana przez podklasy w celu zwrócenia konkretnego obiektu Transport.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.TaxiService.transport_name">
+<span class="sig-name descname"><span class="pre">transport_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.TaxiService.transport_name" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca tekstową nazwę usługi transportowej.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="services.TransportServices">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">services.</span></span><span class="sig-name descname"><span class="pre">TransportServices</span></span><a class="headerlink" href="#services.TransportServices" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Abstrakcyjna klasa bazowa dla usług transportowych (Creator).
+Deklaruje metodę fabrykującą create_transport oraz zawiera główną logikę
+biznesową zamawiania pojazdów i weryfikacji ich dostępności.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="services.TransportServices.create_transport">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">create_transport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.TransportServices.create_transport" title="Link to this definition">¶</a></dt>
+<dd><p>Metoda fabrykująca (Factory Method).
+Musi zostać nadpisana przez podklasy w celu zwrócenia konkretnego obiektu Transport.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.TransportServices.order_transport">
+<span class="sig-name descname"><span class="pre">order_transport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.TransportServices.order_transport" title="Link to this definition">¶</a></dt>
+<dd><p>Główna metoda realizująca zamówienie pojazdu.
+Sprawdza dostępność usługi. Jeśli jest dostępna, zamawia pojazd
+i zmienia jego status dostępności na False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="services.TransportServices.transport_name">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">transport_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#services.TransportServices.transport_name" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca tekstową nazwę usługi transportowej.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Transport</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">PythonProject3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="customer.html">customer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">services module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transport.html">transport module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">PythonProject3</a><ul>
+      <li>Previous: <a href="main.html" title="previous chapter">main module</a></li>
+      <li>Next: <a href="transport.html" title="next chapter">transport module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Maks.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/services.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
