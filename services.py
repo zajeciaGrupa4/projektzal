@@ -21,6 +21,9 @@ class TransportServices(ABC):
             print(f"Typ pojazdu: {transport_object.vehicle_type()}")
             print(f"Przewidywany czas przyjazdu: {transport_object.arrival_time()}")
             print(f"Przewidywany czas podróży: {transport_object.travel_time()}")
+            #------
+            self.available = False
+            print(f"Pojazd {self.transport_name()} został zamówiony i jest teraz niedostępny.")
         else:
             print(f"Brak dostępnych pojazdów typu {self.transport_name()}.")
 
